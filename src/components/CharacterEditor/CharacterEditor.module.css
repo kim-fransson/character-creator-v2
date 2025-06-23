@@ -5,6 +5,7 @@
 
 .maxWidthWrapper {
   position: relative;
+  z-index: 1;
 }
 
 .header {
@@ -34,7 +35,14 @@
 }
 
 .controlColumn {
-  max-width: 50%;
+  display: flex;
+  overflow-x: auto;
+  flex-direction: row;
+  margin-left: -32px;
+  margin-right: -32px;
+  padding-left: 32px;
+  padding-right: 32px;
+  gap: 32px;
 }
 
 .perspectiveDecoration {
@@ -44,4 +52,10 @@
   bottom: 0%;
   left: 0;
   right: 0;
+}
+
+@media (width >= 40rem) {
+  .controlColumn {
+    flex-direction: column;
+  }
 }
